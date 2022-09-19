@@ -9,13 +9,13 @@ perform Order CRUD using repository pattern in laravel with API. Repository patt
 - In OrderRepository.php file, create a class which implements OrderRepositoryInterface, in this class we will declare the functioned which we created in OrderRepositoryInterface.php. so basically, we will perform functionality on Model which we usually performed in Controller.
 NOTE: don't forget to import Model and Interface inside this repository file
 3) After creating Interface and Repository, we have to bind them with each other, you can do so by either of following 2 steps:
-    -Step 1 
+- Step 1 
         - Create a seprate service provider by typing/copying command `php artisan make:provider OrderServiceProvider`(or any name you want)
             - inside this file there will be a function named as "register", bind Interface with Repository, its code is as
                 `$this->app->bind(OrderRepositoryInterface::class, OrderRepository::class)`
         - Register this service provider by adding this serviceProvider class inside `provider` function, which is located in `config/app.php`
-    -Step 2
-        -Another way is to add `$this->app->bind(OrderRepositoryInterface::class, OrderRepository::class)` inside `AppServiceProvider`, its advantage is that you don't have to register service provider inside the config/app.php
+    - Step 2
+        - Another way is to add `$this->app->bind(OrderRepositoryInterface::class, OrderRepository::class)` inside `AppServiceProvider`, its advantage is that you don't have to register service provider inside the config/app.php
 4) Now the repositories are ready to use, In this step we will use Interface inside the controller
 - Import Interface inside desired controller
 - Create variable as private, i.e `private OrderRepositoryInterface $orderRepository`
