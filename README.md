@@ -1,7 +1,7 @@
 # order-repository-pattern-laravel
 perform Order CRUD using repository pattern in laravel with API. Repository pattern will help us to clean our code further more. Its one of the component of SOLID technique.
 
-# Here are the steps which you can follow for repository pattern, I will use example names accourding to mine project, i.e related to Order:
+## Here are the steps which you can follow for repository pattern, I will use example names accourding to mine project, i.e related to Order:
 1) Create a folder with Interface and create file with php extension according to your project name, i.e. OrderInterface.php
 - In this file create Interface, i.e Interface OrderRepositoryInterface, and add define functions you want to used inside it. typically they can be related to CRUD
 2) After creating Interface, create a folder for repository file, named as Repositories.
